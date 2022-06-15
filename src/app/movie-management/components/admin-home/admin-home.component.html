@@ -1,0 +1,33 @@
+<div class="wrapper">
+  <div>
+    <h3>Movie-Management-Module</h3>
+    <p>you are now in the administration area</p>
+  </div>
+
+
+  <!-- Movies addding-->
+  <div class="adding">
+    <h4>Add a new Movie</h4>
+    <div>
+      <input type="number" placeholder="id" #id><br>
+      <input type="text" placeholder="title" #title><br>
+      <input type="number" placeholder="year" #year><br>
+      <button (click)="addMovie(id.value, title.value, year.value)">Add Movie</button>
+    </div>
+  </div>
+
+  <!-- List of all Movies-->
+  <div class="listing">
+    <h4>Add a new Movie</h4>
+    <table>
+      <tbody>
+      <tr *ngFor="let movie of (movies$ | async); let i = index">
+        <li>
+          {{movie?.title}}
+        </li>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

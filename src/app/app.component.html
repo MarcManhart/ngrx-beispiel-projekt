@@ -1,0 +1,18 @@
+<a routerLink=""><h1>{{title}}</h1></a>
+
+<p>
+  In this application there are two independent modules, both designed to work on the same data in the store.
+</p>
+<ul>
+  <li>
+    <span style="color:tomato">Movie Management Module</span> is for creating and deleting movie entries.
+  </li>
+  <li>
+    <span style="color:teal">Movie Customer Module</span> is intended for the customer and is intended to list the available movies.
+  </li>
+</ul>
+
+<button type="button" routerLink="/movie-management">Movie-Management</button>
+<button type="button" routerLink="/movie-customer-view">Movie-Customer-View</button>
+
+<router-outlet></router-outlet>

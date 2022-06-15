@@ -1,0 +1,17 @@
+<div style="border: 2px solid teal">
+  <h3>Available Movies</h3>
+
+  <ng-container *ngIf="movies$">
+    <p>below is a list of all available movies here</p>
+    <table>
+      <tbody>
+      <tr *ngFor="let movie of (movies$ | async); let i = index">
+        <li>
+          {{movie?.title}}
+        </li>
+      </tr>
+      </tbody>
+    </table>
+  </ng-container>
+
+</div>
