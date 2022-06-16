@@ -3,7 +3,7 @@ import {createReducer, on} from "@ngrx/store";
 import {createEntityAdapter, EntityAdapter, EntityState} from "@ngrx/entity";
 import * as MovieActions from '../actions/movie.actions';
 
-export const moviesFeatureKey = 'movies-state';
+export const moviesFeatureKey = 'movies-customer';
 
 export interface State extends EntityState<Movie> {
   // zusätzliche Werte können hier gespeichert werden, wie z.B. "selectedMovieId"

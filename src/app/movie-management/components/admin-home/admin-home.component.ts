@@ -5,7 +5,7 @@ import {select, Store} from "@ngrx/store";
 import {loadMovies} from "../../store/actions/movie.actions";
 import {Observable} from "rxjs";
 import {Movie} from "../../models/movie.model";
-import {selectAllMovies} from "../../store/selectors/index.selectors";
+import {selectAllMovies} from "../../store/selectors/movie.selectors";
 
 @Component({
   selector: 'app-home',
@@ -29,4 +29,7 @@ export class AdminHomeComponent implements OnInit {
     let _year = Number(year);
     this.store.dispatch(fromActions.addMovie({movie: {id: _id, title: _title, year: _year}}));
   }
+
+  // onMovieTitleClick(id: number) {
+  // }
 }

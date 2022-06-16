@@ -1,5 +1,7 @@
 import {createFeatureSelector, createSelector} from '@ngrx/store';
 import * as fromReducer from "../reducers/movie.reducer";
+import * as routerSelectors from "./router.selector";
+import {Movie} from "../../models/movie.model";
 
 const {
   selectIds,
@@ -16,3 +18,10 @@ export const selectMovieEntities = createSelector(getMovieState, selectEntities)
 export const selectMovieTotal = createSelector(getMovieState, selectTotal);
 
 export const selectSelectedMovieId = createSelector(getMovieState, state => state.selectedMovieId)
+
+// nutzung vom router für spezifischere Abfragen auf :id Touten
+export const getActiveMovie = createSelector(
+  selectAllMovies,
+  routerSelectors.selectRouteParams,
+  (movies, {id}) => movies.find(movie => movie.id === Number(id))
+);

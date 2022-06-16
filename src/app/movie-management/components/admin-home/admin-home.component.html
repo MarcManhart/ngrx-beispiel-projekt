@@ -22,9 +22,7 @@
     <table>
       <tbody>
       <tr *ngFor="let movie of (movies$ | async); let i = index">
-        <li>
-          {{movie?.title}}
-        </li>
+        <li><a routerLink="{{movie.id}}">{{movie?.title}}</a></li>
       </tr>
       </tbody>
     </table>

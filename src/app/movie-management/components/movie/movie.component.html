@@ -1,3 +1,8 @@
 <div style="border: 2px solid yellowgreen">
   <h3>MOVIE</h3>
+  <ng-container *ngIf="(movie$ | async) !== undefined">
+    <p>Id: {{(movie$ | async)?.id}}</p>
+    <p>Title: {{(movie$ | async)?.title}}</p>
+    <p>Year: {{(movie$ | async)?.year}}</p>
+  </ng-container>
 </div>

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {select, Store} from "@ngrx/store";
 import {loadMovies} from "../../../movie-management/store/actions/movie.actions";
 import * as fromReducer from "../../../movie-management/store/reducers/movie.reducer"
-import {selectAllMovies} from "../../../movie-management/store/selectors/index.selectors";
+import {selectAllMovies} from "../../../movie-management/store/selectors/movie.selectors";
 import {Observable} from "rxjs";
 import {Movie} from "../../../movie-management/models/movie.model";
 
